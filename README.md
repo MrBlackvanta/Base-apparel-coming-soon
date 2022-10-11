@@ -28,7 +28,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/MrBlackvanta/Base-apparel-coming-soon)
-- Live Site URL: [Live](https://article-preview-vanta.netlify.app/)
+- Live Site URL: [Live](https://coming-soon-vanta.netlify.app/)
 
 ### Built with
 
