@@ -59,7 +59,10 @@ body {
   min-height: 100vh;
   background-color: hsl(0, 0%, 98%);
   font-family: "Josefin Sans", sans-serif;
-  display: flex;
+
+  & .main {
+    display: flex;
+  }
 }
 
 @media only screen and (max-width: 38.75em) {
