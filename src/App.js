@@ -1,4 +1,4 @@
-import Details from "./components/Details";
+import 
 import Hero from "./components/Hero";
 import logo from "./images/logo.svg";
 import arrow from "./images/icon-arrow.svg";
