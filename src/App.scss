@@ -56,12 +56,12 @@ html {
 
 body {
   text-rendering: optimizeSpeed;
-  min-height: 100vh;
   background-color: hsl(0, 0%, 98%);
   font-family: "Josefin Sans", sans-serif;
 
   & .main {
     display: flex;
+    height: calc(100vh - 10px);
   }
 }
 

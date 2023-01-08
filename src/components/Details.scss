@@ -1,15 +1,27 @@
 @import "./colors";
 
 .details {
-  width: 57vw;
-  padding: 7.8% 0 0 19.9%;
+  flex: 2;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+
+  &-content {
+    width: 58rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &-logo {
+    margin-top: 15rem;
+  }
 
   &-heading {
-    margin-top: 20%;
+    margin-top: 15rem;
     font-size: 6.4rem;
     text-transform: uppercase;
     font-weight: 600;
@@ -30,28 +42,70 @@
     line-height: 27px;
     color: $desaturated-red;
   }
+
+  &-error {
+    color: $desaturated-red;
+    font-size: 1.6rem;
+    padding-left: 3.3rem;
+    margin-top: 1rem;
+    transform: translateY(-7rem);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+  }
+}
+
+.shown {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
 }
 
 .form {
   position: relative;
   &-input {
-    width: 67%;
-    padding: 1.7rem 3rem;
+    width: 57rem;
+    padding: 2rem 3rem;
     margin: 0.8rem 0;
     border: 1px solid $desaturated-red;
     border-radius: 30px;
+    color: #000;
+    font-size: 1.6rem;
+    outline: transparent;
+
+    &::placeholder {
+      color: $desaturated-red;
+      font-size: 1.6rem;
+    }
   }
 
   &-btn {
     border: none;
+    cursor: pointer;
     color: $white;
-    padding: 1.5rem 4rem;
+    padding: 2.1rem 4.5rem;
     text-align: center;
     border-radius: 30px;
     position: absolute;
-    top: 5px;
-    right: 170px;
+    top: 8px;
+    right: -1px;
     background: $linear-pink;
     box-shadow: 0 1rem 2rem rgba($soft-red, $alpha: 0.3);
+
+    &:hover {
+      background: $linear-pink-light;
+    }
   }
+}
+
+.invalid {
+  input {
+    border: 2px solid red;
+  }
+}
+
+.error-icon {
+  position: absolute;
+  top: 25px;
+  right: 120px;
 }
