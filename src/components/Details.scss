@@ -1,7 +1,7 @@
 @import "./colors";
 
 .details {
-  flex: 2;
+  flex: 1.5;
   background-image: url(../images/bg-pattern-desktop.svg);
   background-repeat: no-repeat;
   background-position: center;
@@ -10,14 +10,10 @@
   justify-content: center;
 
   &-content {
-    width: 58rem;
+    max-width: 58rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  &-logo {
-    margin-top: 15rem;
   }
 
   &-heading {
@@ -49,22 +45,14 @@
     padding-left: 3.3rem;
     margin-top: 1rem;
     transform: translateY(-7rem);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s;
   }
-}
-
-.shown {
-  transform: translateY(0);
-  opacity: 1;
-  visibility: visible;
 }
 
 .form {
   position: relative;
+  width: 90%;
   &-input {
-    width: 57rem;
+    min-width: 90%;
     padding: 2rem 3rem;
     margin: 0.8rem 0;
     border: 1px solid $desaturated-red;
@@ -72,6 +60,7 @@
     color: #000;
     font-size: 1.6rem;
     outline: transparent;
+    background-color: transparent;
 
     &::placeholder {
       color: $desaturated-red;
@@ -108,4 +97,26 @@
   position: absolute;
   top: 25px;
   right: 120px;
+}
+
+@media only screen and (max-width: 65.62em) {
+  .details {
+    order: 3;
+    text-align: center;
+    background: hsl(0, 74%, 95%);
+
+    &-heading {
+      margin-top: 8rem;
+      font-size: 5.5rem;
+      line-height: 1.1;
+    }
+    &-description {
+      padding: 0;
+    }
+  }
+
+  .form-input {
+    max-width: 57rem;
+    margin-bottom: 8rem;
+  }
 }

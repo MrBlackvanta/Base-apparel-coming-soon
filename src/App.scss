@@ -62,17 +62,21 @@ body {
   & .main {
     display: flex;
     height: calc(100vh - 10px);
+
+    & .logo-container {
+      background-color: hsl(0, 74%, 98%);
+    }
+
+    & .logo {
+      max-width: 30%;
+      margin: 5rem;
+    }
   }
 }
 
-@media only screen and (max-width: 38.75em) {
-  body {
-    padding: 6rem 4rem;
-  }
-}
-
-@media only screen and (max-width: 33.75em) {
-  html {
-    font-size: 55%;
+@media only screen and (max-width: 65.62em) {
+  body .main {
+    flex-direction: column;
+    height: 100%;
   }
 }

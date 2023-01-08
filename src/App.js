@@ -1,3 +1,4 @@
+import Logo from "./components/Logo";
 import Details from "./components/Details";
 import Hero from "./components/Hero";
 import logo from "./images/logo.svg";
@@ -20,6 +21,9 @@ function App() {
   return (
     <div>
       <main role="main" className="main">
+        <div className="logo-container">
+          {window.innerWidth <= 1050 ? <Logo logo={data.logo} /> : ""}
+        </div>
         <Details
           logo={logo}
           heading1={data.heading1}

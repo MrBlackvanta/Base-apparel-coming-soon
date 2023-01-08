@@ -1,6 +1,7 @@
 import { useState } from "react";
 import errorImage from "../images/icon-error.svg";
 import "./Details.scss";
+import Logo from "./Logo";
 
 export default function Details(props) {
   const [email, setEmail] = useState("");
@@ -29,16 +30,11 @@ export default function Details(props) {
   };
 
   const formClasses = hasError ? "form invalid" : "form";
-  const errorClasses = hasError ? "details-error shown" : "details-error";
 
   return (
     <div className="details">
       <div className="details-content">
-        <img
-          src={props.logo}
-          alt="Base Apparel Logo"
-          className="details-logo"
-        />
+        {window.innerWidth <= 1050 ? "" : <Logo logo={props.logo} />}
         <h1 className="details-heading">
           <span className="details-heading-1">{props.heading1}</span>
           <br />
@@ -55,7 +51,7 @@ export default function Details(props) {
             onChange={emailChangeHandler}
           />
           {hasError && (
-            <p className={errorClasses}>Please provide a valid email</p>
+            <p className="details-error">Please provide a valid email</p>
           )}
           {hasError && (
             <img src={errorImage} alt="error sign" className="error-icon" />
